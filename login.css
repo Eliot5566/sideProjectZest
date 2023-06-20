@@ -1,0 +1,105 @@
+.divButton {
+    border-radius: 15%;
+    background-color: rgb(103, 101, 101);
+    ;
+    font-size: 36px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    /* position: fixed; */
+    height: 100px;
+    width: 160px;
+    margin: 0 10vw;
+
+}
+
+.longSpace {
+    margin: 13vh;
+}
+
+.butc {
+
+
+    text-align: center;
+    font-size: 36px;
+    padding: 18px;
+    margin: 18px;
+}
+
+.registerText {
+    border: 1px solid black;
+    padding: 1rem 10rem;
+
+
+}
+
+.registerText:hover {
+    background-color: rgb(103, 101, 101);
+    color: white;
+}
+
+#loginText:hover {
+    background-color: rgb(103, 101, 101);
+    color: white;
+}
+
+
+.logText:hover {
+    background-color: rgb(103, 101, 101);
+    color: white;
+}
+
+.loginControl {
+    margin-bottom: 50px;
+}
+
+.timg1 {
+    display: flex;
+    justify-content: center;
+}
+
+.timg {
+
+
+    /* margin-top: 150px; */
+
+
+    /* margin-left: 33vw; */
+    height: 35vh;
+
+}
+
+.image-container {
+    display: flex;
+    /* 使用 Flexbox 布局 */
+    justify-content: space-around;
+    /* 图片之间的间距 */
+    align-items: center;
+    /* 图片垂直居中 */
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    /* 添加相对定位 */
+
+}
+
+.image-container img {
+    width: 600px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 0 5px;
+    /* 图片之间的间距 */
+}
+
+.image-container1:hover {
+    content: url('./img/s11-1.jpg')
+}
+
+.image-container2:hover {
+    content: url('./img/s12-1.jpg')
+}
+
+.image-container3:hover {
+    content: url('./img/s13-1.jpg')
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
+        rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-dist/css/bootstrap.css">
+    <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="icon" type="image/x-icon" href="./img/001.ico">
+
+    <link rel="stylesheet" href="./login.css">
+
+    <title>ZestWear</title>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <!--nav bar-->
+        <nav class="navbar navbar-expand-lg fixed-top mb-5 " id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="./img/1103.png" class="imgtop img-fluid" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse navShow " id="navbarNav">
+                    <ul class="navbar-nav d-flex justify-content-end">
+                        <li class="nav-item">
+                            <a class="nav-link active fs-4" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fs-4" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link fs-4" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--end nav-->
+
+    </header>
+
+
+
+
+
+    <div class="longSpace"></div>
+
+
+    <div class="container">
+
+        <div>
+            <div class="loginControl container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <p class="fs-2 font-weight-bold">LOG IN TO YOUR ACCOUNT</p>
+                        <p class="hidelogin"><span id="loginText" class="clickableText me-5">LOG IN</span></p>
+
+                        <!-- 改用Input輸入帳號密碼 預設隱藏-->
+
+                        <div id="login-form" class="mb-5">
+                            <input type="text" id="username-input" class="mb-4" placeholder="Username">
+                            <br>
+                            <input type="password" id="password-input" placeholder="Password"><br>
+                            <button class="mt-4 logText" onclick="submitLogin()">LOG IN</button>
+                        </div>
+
+                        <div id="register-form" style="display: none;">
+                            <input type="text" id="newUsername" class="mb-4" placeholder="NewUserName"><br>
+
+                            <input type="password" id="newPassword" placeholder="NewPassword"><br>
+                            <button class="mt-4" onclick="addAccount()">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <p class="mb-5 fs-2 font-weight-bold">NEED AN ACCOUNT?</p>
+                        <p><span id="registerText" class="clickableText registerText">REGISTER</span></p>
+                    </div>
+
+                    <div class="col-lg-2">
+                        <div class="timg1"> <img class="timg" src="./img/s10.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+
+        </div>
+
+        <div id="grid-container"></div>
+
+
+
+
+
+        <p id="news"></p>
+    </div>
+
+
+
+
+    </div>
+    <!--結束首頁圖片-->
+
+
+
+    </div>
+
+
+
+    <!-- 設計左右半部 -->
+
+
+
+
+
+
+
+    <div class="butc">
+        <h1 id="sign">Have a nice day!</h1>
+
+        <h5 id="newfeed">Login to load more information!</h5>
+
+
+    </div>
+    <div id="imageContainer" class="image-container"></div>
+
+
+
+
+
+
+
+    <script src="login.js"></script>
+
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,362 @@
+/* 變色用 */
+
+.navbar {
+    background-color: rgb(103, 101, 101);
+
+}
+
+#navbarNav>ul>li>a {
+    color: #fff;
+}
+
+
+.navbar-brand>img {
+    content: url('./img/1104.png');
+    width: 175px;
+    height: 100%;
+}
+
+.navbar-scroll {
+    background-color: white;
+    /* 设置滚动时的背景色 */
+    transition: background-color 0.3s ease;
+
+    /* 添加背景色的过渡效果 */
+
+
+    #navbarNav>ul>li>a {
+        color: black;
+    }
+
+    .navbar-brand>img {
+        content: url('./img/1103.png');
+    }
+}
+
+
+
+
+
+/* 結束 */
+.navShow {
+    /* margin-right: 50px; */
+    margin-left: 25%;
+    padding: 20px;
+}
+
+.imgtop {
+    margin-left: 19vw;
+
+
+}
+
+.nav-link {
+    margin-left: 15px;
+}
+
+.containerimg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+
+    /*always 50%*/
+}
+
+.containerimg img {
+    /* width: 95vw; */
+    /* 图片宽度占满容器 */
+    height: 100vh;
+    /* 根据宽度自适应高度 */
+    object-fit: cover;
+    /* 图片按比例缩放并填充整个容器 */
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    color: #0e0e0e;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    word-break: break-all;
+    font-size: 2vw;
+
+
+}
+
+.gap {
+    display: block;
+    height: 20px
+}
+
+.aboutText {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bg-image {
+    background-image: url(./img/bg-pattern.jpg);
+    z-index: -1;
+    background-size: cover;
+
+
+}
+
+/* 內部小介紹 */
+.ibox-1 {
+    position: relative;
+    min-height: 50px
+}
+
+.ibox-1 .ibox-icon {
+    position: absolute;
+    font-size: 3.3rem;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 3px
+}
+
+.ibox-1 .ibox-cont {
+    margin-left: 72px;
+    font-weight: bold;
+}
+
+.ibox-1 .ibox-title {
+    font-weight: 500;
+    font-weight: bold;
+}
+
+.ibox-1 .ibox-text {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: .97rem;
+    margin-top: -1px;
+    font-weight: bold;
+}
+
+.icon {
+    width: 36px;
+    /* 更改為所需的寬度 */
+    height: auto;
+}
+
+.ibox-cont {
+    font-weight: bold;
+}
+
+.box {
+    padding: 72px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    width: 100%;
+}
+
+.PGrid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.PGrid2 {
+    display: grid;
+    gap: 60px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 3fr));
+}
+
+/* .boxs {
+    margin: 10px;
+    height: 25vh;
+} */
+
+/* .boxs>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+
+} */
+
+.boxs1>img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+
+
+}
+
+/* 指到圖片A 更改為圖片B  透明度A:1=>0 B: 0=>1*/
+/* .image1>img:hover {
+    content: url('./img/s1-1.jpg');
+
+} */
+
+.boxs {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    overflow: hidden;
+}
+
+.boxs img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    opacity: 1;
+    /* 透明度 */
+}
+
+.boxs .image1-1 {
+    opacity: 0;
+}
+
+.boxs:hover .image1 {
+    opacity: 0;
+}
+
+.boxs:hover .image1-1 {
+    opacity: 1;
+}
+
+/* 字段介紹 */
+.caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.boxs:hover .caption {
+    opacity: 1;
+}
+
+
+/* 修改 */
+
+/* .image2>img:hover {
+    content: url('./img/s2-1.jpg');
+}
+
+.image3>img:hover {
+    content: url('./img/s3-1.jpg');
+}
+
+.image4>img:hover {
+    content: url('./img/s4-1.jpg');
+}
+
+.image5>img:hover {
+    content: url('./img/s5-1.jpg');
+}
+
+.image6>img:hover {
+    content: url('./img/s6-1.jpg');
+}
+
+.image7>img:hover {
+    content: url('./img/s7-1.jpg');
+}
+
+.image8>img:hover {
+    content: url('./img/s8-1.jpg');
+}
+
+.image9>img:hover {
+    content: url('./img/s9-1.jpg');
+} */
+
+
+
+.carousel-item>img {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+}
+
+.blockquote {
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    z-index: 2;
+    font-weight: bold;
+
+}
+
+/* 聯繫 */
+
+.contact-info {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* about css */
+.abouthtml {
+    /* margin: 200px; */
+    padding-top: 50px;
+}
+
+.aboutImg {
+    width: 35vw;
+}
+
+.aboutIntro {
+    word-wrap: break-word;
+    text-align: left;
+}
+
+/* 產品介紹 */
+.sellImg {
+    width: 80%;
+    margin-left: 5vw;
+}
+
+.productText {
+    margin-top: 10vh;
+    /* margin-left: 1vw; */
+    padding: 50px;
+
+}
+
+/* .spanSpace {
+    margin-left: 4vw;
+} */
+
+.btn-primary {
+    background-color: rgb(103, 101, 101);
+    border: 1px solid black;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
