@@ -34,6 +34,35 @@
 }
 
 
+/* sell css */
+
+.categories {
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .category {
+    margin-right: 5px;
+  }
+  
+  .products {
+    display: flex;
+    
+    justify-content: center;
+  }
+  
+  .product {
+    
+    display: none;
+  }
+  
+  .show {
+    display: block;
+  }
+  
+  
+
 
 
 
@@ -313,10 +342,11 @@
 /* 聯繫 */
 
 .contact-info {
-    margin: 0;
-    padding: 0;
+    margin: 3px;
+    padding: 3px;
     list-style-type: none;
 }
+
 
 /* about css */
 .abouthtml {
@@ -359,4 +389,29 @@
     background-color: white;
     color: black;
     border: 1px solid black;
+  
 }
+
+
+
+
+
+
+/* sell css */
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+.category{
+    border:none;
+    background-color: #fff;
+    padding: 0 12px;
+}
+.category:hover{
+    border-bottom: 1px solid black;
+    transform: scale(1.1);
+    font-weight: bolder;
+}
+

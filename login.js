@@ -1,7 +1,4 @@
-
-
-var dataBase = [
-    {
+var dataBase = [{
         userName: 'Eliot',
         password: 'su'
     },
@@ -153,7 +150,7 @@ function submitLogin() {
         image1.src = './img/s11.jpg'; // 設置圖片路徑
         image1.alt = 'Image 1'; // 設置第一張圖片的文本
         imageContainer.appendChild(image1); // 把第一張圖加到html
-        image1.classList.add('image-container1');//新增class類別
+        image1.classList.add('image-container1'); //新增class類別
 
 
 
@@ -218,4 +215,19 @@ registerText.addEventListener("click", function () {
     loginForm.style.display = "none";
     registerForm.style.display = "block";
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
