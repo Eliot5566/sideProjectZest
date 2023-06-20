@@ -38,16 +38,16 @@
                 <div class="collapse navbar-collapse navShow " id="navbarNav">
                     <ul class="navbar-nav d-flex justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link active fs-4" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link active fs-4 home" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="about.html">About</a>
+                            <a class="nav-link fs-4 navAbout" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="sell.html">New Arrival</a>
+                            <a class="nav-link fs-4 NewArrival" href="sell.html">New Arrival</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link fs-4" href="login.html">Login</a>
+                            <a class="nav-link fs-4 navLogin" href="login.html">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -70,13 +70,11 @@
         <div class="active">
             <button id="allButton" class="category " data-filter="all">All</button>
             <button id="cat1" class="category ct1" data-filter="category1" onmouseover="changeText()"
-                onmouseout="resetText()">PPP品牌LOGO系列</button>
-            <button id="secondButton" class="category" data-filter="category2" 
-            onmouseover="changeText2()"
-                onmouseout="resetText2()">印花標語TEE系列</button>
-            <button id="cat3" class="category" data-filter="category3"
-            onmouseover="changeText3()"
-                onmouseout="resetText3()">熱銷商品
+                onmouseout="resetText()">Brand Logo</button>
+            <button id="secondButton" class="category" data-filter="category2" onmouseover="changeText2()"
+                onmouseout="resetText2()">Printed Slogan</button>
+            <button id="cat3" class="category" data-filter="category3" onmouseover="changeText3()"
+                onmouseout="resetText3()">Restock
             </button>
         </div>
 
@@ -84,7 +82,7 @@
 
     <div class="products products-container">
         <div class="product category1">
-            <h1 style="text-align: center;">PPP品牌LOGO系列</h1>
+            <h1 style="text-align: center;">Brand Logo</h1>
             <div class="PGrid container mb-5 mt-2">
                 <div class="boxs image1">
                     <a href="https://www.pazzo.com.tw/zh-tw/market/n/20790?c=46773"><img src="./img/s23.jpg" alt="">
@@ -172,7 +170,7 @@
 
 
         <div class="product category2">
-            <h1 style="text-align: center;">印花標語TEE系列</h1>
+            <h1 style="text-align: center;">Printed Slogan</h1>
             <div class="PGrid container mb-5 mt-2">
                 <div class="boxs image1">
                     <a href="https://www.pazzo.com.tw/zh-tw/market/n/20039?c=44944"><img src="./img/s15.jpg" alt="">
@@ -262,7 +260,7 @@
 
     <div class="product category3">
 
-        <h1 style="text-align: center;">Best Sale Goods</h1>
+        <h1 style="text-align: center;">Restock</h1>
         <div class="PGrid container mb-5 mt-2">
             <div class="boxs image1">
                 <a href="https://www.pazzo.com.tw/zh-tw/market/n/20039?c=44944"><img src="./img/s1.jpg" alt="">
@@ -495,33 +493,33 @@
         // onmouseover="changeText()"=>滑鼠移入 onmouseout="resetText()"=>滑鼠移出 調用function
         function changeText() {
             var cha1 = document.getElementById('cat1');
-            cha1.innerHTML = "Brand Logo";
+            cha1.innerHTML = "PPP品牌LOGO系列";
         }
 
         function resetText() {
             var cha1 = document.getElementById('cat1');
-            cha1.innerHTML = "PPP品牌LOGO系列";
+            cha1.innerHTML = "Brand Logo";
         }
 
         function changeText2() {
             var cha2 = document.getElementById('secondButton');
-            cha2.innerHTML = "Printed Slogan";
+            cha2.innerHTML = "印花標語TEE系列";
         }
 
         function resetText2() {
             var cha2 = document.getElementById('secondButton');
-            cha2.innerHTML = "印花標語TEE系列";
+            cha2.innerHTML = "Printed Slogan";
         }
 
 
         function changeText3() {
             var cha3 = document.getElementById('cat3');
-            cha3.innerHTML = "Restock";
+            cha3.innerHTML = "熱銷商品";
         }
 
         function resetText3() {
             var cha3 = document.getElementById('cat3');
-            cha3.innerHTML = "熱銷商品";
+            cha3.innerHTML = "Restock";
         }
 
 

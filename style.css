@@ -414,4 +414,31 @@
     transform: scale(1.1);
     font-weight: bolder;
 }
+.home{
+    border: none;
+}
+.home:hover{
+    border-bottom: 1px solid black;
+}
 
+.navAbout{
+    border: none;
+}
+.navAbout:hover{
+    border-bottom: 1px solid black;
+}
+
+.NewArrival{
+    border: none;
+
+}
+.NewArrival:hover{
+    border-bottom: 1px solid black;
+}
+
+.navLogin{
+    border: none;
+}
+.navLogin:hover{
+    border-bottom: 1px solid rgb(226, 182, 128);
+}
