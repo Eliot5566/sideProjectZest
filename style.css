@@ -442,3 +442,53 @@
 .navLogin:hover{
     border-bottom: 1px solid rgb(226, 182, 128);
 }
+
+
+/* 產品詳細介紹 */
+
+.buttonSell{
+    background-color: white;
+    border: none;
+    padding: 12px;
+    margin: 12px;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.colorPick1{
+    height: 36px;
+    width:36px;
+    background-color: rgb(233, 1, 1);
+}
+.colorPick2{
+    height: 36px;
+    width:36px;
+    background-color: rgb(255, 232, 24);
+}
+.colorPick3{
+    height: 36px;
+    width:36px;
+    background-color: rgb(36, 97, 211);
+}
+.selected {
+    border: 2px solid #000;
+    padding: 10px;
+    margin:5px;
+  }
+  
+.buy{
+    background-color: #fff;
+    border: 1px solid black;
+    font-size: medium;
+    padding: 1.5vh 5vw;
+    font-family: 'Times New Roman', Times, serif;
+    /* display: block; */
+}
+.detail{
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.detail div{
+    font-family: 'Times New Roman', Times, serif;
+
+}

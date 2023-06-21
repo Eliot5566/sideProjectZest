@@ -14,7 +14,7 @@
     <script src="./bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./style.css">
 
-    <title>ZestWear <img src="" alt=""></title>
+    <title>ZestWear </title>
     <link rel="icon" type="image/x-icon" href="./img/001.ico">
     <script src="./login.js"></script>
 
@@ -42,10 +42,10 @@
                             <a class="nav-link fs-4" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fs-4" href="#">Pricing</a>
+                            <a class="nav-link fs-4" href="sell.html">New Arrival</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link fs-4">Disabled</a>
+                            <a class="nav-link fs-4" href="login.html">Login</a>
                         </li>
                     </ul>
                 </div>
@@ -66,31 +66,52 @@
                 <img src="./img/s1.jpg" class="img-fluid mt-5 sellImg" alt="Image">
             </div>
 
+
+
             <!-- 右半部 -->
             <div class="col-lg-6 productText row">
-
                 <div class="col-lg-4 fs-5">
                     <p>厚磅城市毛圈刺繡帽TEE</p>
-                    <p>地一部分</p>
+                    <button class="buttonSell" onclick="selectSize('S')" id="sizeS">S</button>
+                    <button class="buttonSell" onclick="selectSize('M')" id="sizeM">M</button>
+                    <button class="buttonSell" onclick="selectSize('L')" id="sizeL">L</button>
+                    <br><br>
+                    <button class="buttonSell colorPick1" onclick="selectColor('Red')" id="colorRed"></button>
+                    <button class="buttonSell colorPick2" onclick="selectColor('Yellow')" id="colorYellow"></button>
+                    <button class="buttonSell colorPick3" onclick="selectColor('Blue')" id="colorBlue"></button>
                 </div>
                 <div class="col-lg-4">
-                    <p style="color: white;">空格</p>
-                    <p>地一部分</p>
-
                 </div>
                 <div class="col-lg-4">
                     <p>NT. 490</p>
-                    <p>地一部分</p>
-
+                    <br><br>
+                    <p id="sizeSelect">S</p>
+                    <br><br><br>
+                    <p id="colorSelect">Red</p>
                 </div>
 
-
+                <hr>
                 <!-- 右半部下半部分 縮合區-三部分 -->
-                <div class="row"></div>
+                <div class="row">
+                    <div style="text-align: center;">Number</div>
+
+                    <div class="col-lg-6 fs-5"><button class=" buy">Buy Now</button></div>
+                    
+                    <div class="col-lg-6 fs-5"><button class=" buy"><span>Add to Bag</span></button></div>
+                </div>
+                <hr>
+                <div class="row detail">
+                    <div class="col-lg-4 fs-5 detail" onclick="showData('product')">商品資訊</div>
+
+                    <div class="col-lg-4 fs-5 detail" onclick="showData('washing')">洗滌方式</div>
+                    <div class="col-lg-4 fs-5 detail" onclick="showData('size')">尺寸介紹</div>
+                </div>
+
+                <div id="dataContainer" class="detail"></div>
+                <hr>
             </div>
 
 
-        </div>
 
 
 
@@ -98,118 +119,182 @@
 
 
 
+            <div class="bg-white mt-5 abouthtml" id="about">
+                <div class="container-fluid">
+                    <div class="row aboutText">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <div class="gap-4 mt-5"></div>
 
 
-        <div class="bg-white mt-5 abouthtml" id="about">
-            <div class="container-fluid">
-                <div class="row aboutText">
-                    <div class="col-lg-8 offset-lg-2 text-center">
-                        <div class="gap-4 mt-5"></div>
-
-
-                    </div>
-                    <!--結束首頁圖片-->
-
-
-
-
-
-                    <!--結束-->
-
-
-                    <!--聯繫資料-->
-
-                    <!-- START: Contact Info -->
-                    <div class="container mt-5 mb-5" id="contact">
-                        <div class="gap"></div>
-                        <div class="row vertical-gap">
-                            <div class="col-lg-5">
-                                <!-- START: Info -->
-                                <h2 class="display-4">Contact Info:</h2>
-                                <div class="gap mt-3"></div>
-
-                                <p>You can contact us through the following contact information, welcome to give us any
-                                    feedback or
-                                    question feedback, and welcome your reply at any time.</p>
-
-                                <ul class="contact-info">
-                                    <li>
-                                        <strong>Address:</strong> 24 Ranch Road, Miami,fl, 33189 United States
-                                    </li>
-                                    <li>
-                                        <strong>Phone:</strong> +1-1186906538
-                                    </li>
-                                    <li>
-                                        <strong>Email:</strong> a7868783@gmail.com
-                                    </li>
-                                    <li>
-                                        <strong>Fax:</strong> +1-6284435434
-                                    </li>
-                                </ul>
-                                <!-- END: Info -->
-
-                            </div>
-
-                            <div class="col-lg-7">
-                                <!-- START: Form -->
-                                <form action="#" class="form">
-                                    <div class="row vertical-gap">
-                                        <div class="col-md-6">
-                                            <input type="text" class="form-control required" name="name"
-                                                placeholder="Your Name">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <input type="email" class="form-control required" name="email"
-                                                placeholder="Your Email">
-                                        </div>
-                                    </div>
-
-                                    <div class="gap"></div>
-                                    <input type="text" class="form-control required" name="title"
-                                        placeholder="Your Title">
-
-                                    <div class="gap"></div>
-                                    <textarea class="form-control required" name="message" rows="8"
-                                        placeholder="Your Comment" aria-required="true"></textarea>
-                                    <div class="gap"></div>
-                                    <div class="form-response-success"></div>
-                                    <div class="form-response-error"></div>
-                                    <button class="btn btn-primary btn-lg">Send Message</button>
-                                </form>
-                                <!-- END: Form -->
-                            </div>
                         </div>
-                        <div class="gap-5"></div>
                     </div>
-                    <!-- END: Contact Info -->
-
-
-
-                    <script>
-                        $(window).scroll(function () {
-                            var scrollTop = $(window).scrollTop();
-
-                            // nav hight
-                            var navbarHeight = $('#navbar').height();
-
-                            // 判斷滾動位置
-                            if (scrollTop > navbarHeight) {
-                                // 添加背景色
-                                $('#navbar').addClass('navbar-scroll');
-                            } else {
-                                // 移除背景色
-                                $('#navbar').removeClass('navbar-scroll');
-                            }
-                        });
-
-
-                    </script>
+                </div>
+            </div>
+            <!--結束首頁圖片-->
 
 
 
 
 
-                    <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+            <!--結束-->
+
+
+            <!--聯繫資料-->
+
+            <!-- START: Contact Info -->
+            <div class="container mt-5 mb-5" id="contact">
+                <div class="gap"></div>
+                <div class="row vertical-gap">
+                    <div class="col-lg-5">
+                        <!-- START: Info -->
+                        <h2 class="display-4">Contact Info:</h2>
+                        <div class="gap mt-3"></div>
+
+                        <p>You can contact us through the following contact information, welcome to give us
+                            any
+                            feedback or
+                            question feedback, and welcome your reply at any time.</p>
+
+                        <ul class="contact-info">
+                            <li>
+                                <strong>Address:</strong> 24 Ranch Road, Miami,fl, 33189 United States
+                            </li>
+                            <li>
+                                <strong>Phone:</strong> +1-1186906538
+                            </li>
+                            <li>
+                                <strong>Email:</strong> a7868783@gmail.com
+                            </li>
+                            <li>
+                                <strong>Fax:</strong> +1-6284435434
+                            </li>
+                        </ul>
+                        <!-- END: Info -->
+
+                    </div>
+
+                    <div class="col-lg-7">
+                        <!-- START: Form -->
+                        <form action="#" class="form">
+                            <div class="row vertical-gap">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control required" name="name"
+                                        placeholder="Your Name">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control required" name="email"
+                                        placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="gap"></div>
+                            <input type="text" class="form-control required" name="title" placeholder="Your Title">
+
+                            <div class="gap"></div>
+                            <textarea class="form-control required" name="message" rows="8" placeholder="Your Comment"
+                                aria-required="true"></textarea>
+                            <div class="gap"></div>
+                            <div class="form-response-success"></div>
+                            <div class="form-response-error"></div>
+                            <button class="btn btn-primary btn-lg">Send Message</button>
+                        </form>
+                        <!-- END: Form -->
+                    </div>
+                </div>
+                <div class="gap-5"></div>
+            </div>
+            <!-- END: Contact Info -->
+
+
+
+            <script>
+                function showData(type) {
+                    var dataContainer = document.getElementById('dataContainer');
+                    var data = '';
+
+                    if (type === 'product') {
+                        data = `此款版型寬鬆
+                                    台灣製造/PAZZO自訂開發布料/親膚棉質布料/印花刺繡造型
+                                    *實品顏色依單品照為主
+                                    棉 100%
+                                    厚薄:適中
+                                    彈性:微彈
+                                    素材產地 / 台灣
+                                    加工產地 / 台灣
+                                    P400093000102`;
+                    } else if (type === 'washing') {
+                        data = `1.深淺色請分開洗滌，以避免造成互相移染。
+                                    2.請將商品翻面再放入大小適中之細網洗衣袋細中弱速水洗，以保持商品型態。
+                                    3.洗滌時，水溫請低於30℃；請使用中性洗劑；浸泡時間不宜過長。
+                                    4.請勿使用漂白劑、螢光增白劑及衣物柔軟劑，以免破壞布料。
+                                    5.不可濕放，以免衣物染色；請弱速輕脫水，不可烘乾，以免衣物縮水。
+                                    6.清洗後請快速調整商品型態並吊掛晾乾即可，勿直接曝曬於陽光下。
+                                    7.如需整燙，請以低溫墊布熨燙，溫度不可超過110℃。
+                                    8.穿著時，請留意避免與配件包包等他物接觸摩擦。`;
+                    } else if (type === 'size') {
+                        data = `S尺寸：適合胸圍 80-85cm，腰圍 60-65cm，臀圍 85-90cm。
+                                     M尺寸：適合胸圍 86-91cm，腰圍 66-71cm，臀圍 91-96cm。
+                                     L尺寸：適合胸圍 92-97cm，腰圍 72-77cm，臀圍 97-102cm。 `;
+                    }
+
+                    dataContainer.innerText = data;
+                }
+
+
+
+                function selectSize(size) {
+                    var sizeS = document.getElementById('sizeS');
+                    var sizeM = document.getElementById('sizeM');
+                    var sizeL = document.getElementById('sizeL');
+
+                    sizeS.classList.remove('selected');
+                    sizeM.classList.remove('selected');
+                    sizeL.classList.remove('selected');
+
+                    if (size === 'S') {
+                        sizeS.classList.add('selected');
+                    } else if (size === 'M') {
+                        sizeM.classList.add('selected');
+                    } else if (size === 'L') {
+                        sizeL.classList.add('selected');
+
+                    }
+                    var sizeSelect = document.getElementById('sizeSelect');
+                    sizeSelect.innerText = size;
+                }
+
+
+
+
+                function selectColor(color) {
+                    var colorRed = document.getElementById('colorRed');
+                    var colorYellow = document.getElementById('colorYellow');
+                    var colorBlue = document.getElementById('colorBlue');
+
+                    colorRed.classList.remove('selected');
+                    colorYellow.classList.remove('selected');
+                    colorBlue.classList.remove('selected');
+
+                    if (color === 'Red') {
+                        colorRed.classList.add('selected');
+                    } else if (color === 'Yellow') {
+                        colorYellow.classList.add('selected');
+                    } else if (color === 'Blue') {
+                        colorBlue.classList.add('selected');
+
+                    }
+                    var colorSelect = document.getElementById('colorSelect');
+                    colorSelect.innerText = color;
+                }
+
+                
+            </script>
+
+
+
+
+
+            <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
 
 </body>
 
