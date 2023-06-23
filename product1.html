@@ -73,6 +73,22 @@
             font-size: 16px;
             border: none;
         }
+
+
+        /* 放大用CSS0 */
+        .fullScreenImage {
+            position: fixed;
+            top: 0;
+            left: 20vw;
+
+            width: auto;
+            height: 120%;
+            z-index: 9999;
+            cursor: pointer;
+            object-fit: cover;
+
+            /* 添加其他样式，如背景颜色、居中等 */
+        }
     </style>
 
 </head>
@@ -126,6 +142,7 @@
                     <img src="./img/pr5.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
                     <img src="./img/pr6.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
                     <img src="./img/pr7.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+
                 </div>
 
                 <div id="imgRed">
@@ -186,7 +203,7 @@
                 <div class="row">
                     <div class="pk row">
                         <div class="col-lg-2 fs-5">
-                            <button class="quantity-control minus">-</button>
+                            <button class="quantity-control minus ">-</button>
                         </div>
                         <div class="col-lg-8"><input type="number" readonly="readonly" class="quantity-input"></div>
 
@@ -202,19 +219,19 @@
 
 
 
-                    <div class="col-lg-6 fs-5"><button class=" buy">Buy Now</button></div>
+                    <div class="col-lg-6 fs-5"><button class="buy m-2">Buy Now</button></div>
 
-                    <div class="col-lg-6 fs-5"><button class=" buy"><span>Add to Bag</span></button></div>
+                    <div class="col-lg-6 fs-5"><button class="buy m-2"><span>Add to Bag</span></button></div>
                 </div>
                 <hr>
-                <div class="row detail">
+                <div class="row detail  mb-2">
                     <div class="col-lg-4 fs-5 detail" onclick="showData('product')">商品資訊</div>
 
                     <div class="col-lg-4 fs-5 detail" onclick="showData('washing')">洗滌方式</div>
                     <div class="col-lg-4 fs-5 detail" onclick="showData('size')">尺寸介紹</div>
                 </div>
 
-                <div id="dataContainer" class="detail detailtx"></div>
+                <div id="dataContainer" class="detail detailtx mb-5"></div>
                 <hr>
             </div>
 
@@ -226,13 +243,28 @@
 
 
 
+        <div class="gap"></div>
+        <div class="gap"></div>
+
+        <div class="bg-white mt-5 abouthtml" id="about">
+            <div class="container-fluid">
+                <div class="row aboutText">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <div class="bg-white mt-5 abouthtml" id="about">
             <div class="container-fluid">
                 <div class="row aboutText">
                     <div class="col-lg-8 offset-lg-2 text-center">
-                        <div class="gap-4 mt-5"></div>
+
 
 
                     </div>
@@ -243,15 +275,17 @@
 
 
         <!-- 推薦商品區 -->
-        <p>推薦商品</p>
+        <div class="mt-5">
+            <p>推薦商品</p>
 
-        <div id="carousel-container">
-            <img src="./img/s9.jpg" alt="">
-            <img src="./img/s10.jpg" alt="">
-            <img src="./img/s11.jpg" alt="">
-            <img src="./img/s12.jpg" alt="">
-            <img src="./img/s13.jpg" alt="">
-            <img src="./img/s14.jpg" alt="">
+            <div id="carousel-container" class="mt-5">
+                <img src="./img/s9.jpg" alt="">
+                <img src="./img/s10.jpg" alt="">
+                <img src="./img/s11.jpg" alt="">
+                <img src="./img/s12.jpg" alt="">
+                <img src="./img/s13.jpg" alt="">
+                <img src="./img/s14.jpg" alt="">
+            </div>
         </div>
 
 
@@ -442,20 +476,20 @@
             }
 
             // Function to handle scroll event
-            function handleScroll() {
-                var rightHalf = document.querySelector('.sticky-right');
-                var images = document.querySelectorAll('.sellImg');
-                var secondToLastImage = images[images.length - 2];
+            // function handleScroll() {
+            //     var rightHalf = document.querySelector('.sticky-right');
+            //     var images = document.querySelectorAll('.sellImg');
+            //     var secondToLastImage = images[images.length - 2];
 
-                if (isElementInViewport(secondToLastImage)) {
-                    rightHalf.classList.remove('sticky');
-                } else {
-                    rightHalf.classList.add('sticky');
-                }
-            }
+            //     if (isElementInViewport(secondToLastImage)) {
+            //         rightHalf.classList.remove('sticky');
+            //     } else {
+            //         rightHalf.classList.add('sticky');
+            //     }
+            // }
 
             // Attach scroll event listener
-            window.addEventListener('scroll', handleScroll);
+            // window.addEventListener('scroll', handleScroll);
 
 
 
@@ -531,6 +565,42 @@
             });
 
 
+
+
+
+
+
+            // 放大版圖片
+            // 获取所有小图像元素
+            var smallImages = document.getElementsByClassName('sellImg');
+
+            // 为每个小图像添加点击事件监听器
+            for (var i = 0; i < smallImages.length; i++) {
+                smallImages[i].addEventListener('click', function () {
+                    // 显示大图像
+                    showFullScreenImage(this.src);
+                });
+            }
+
+
+
+
+
+            function showFullScreenImage(imageUrl) {
+                // 创建全屏图像元素
+                var fullScreenImage = document.createElement('img');
+                fullScreenImage.src = imageUrl;
+                fullScreenImage.className = 'fullScreenImage';
+
+                // 添加点击事件监听器，以关闭全屏图像
+                fullScreenImage.addEventListener('click', function () {
+                    // 移除全屏图像元素
+                    document.body.removeChild(this);
+                });
+
+                // 将全屏图像元素添加到页面主体中
+                document.body.appendChild(fullScreenImage);
+            }
 
         </script>
 
