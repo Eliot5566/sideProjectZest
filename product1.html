@@ -20,6 +20,61 @@
 
 
 
+    <style>
+        #carousel-container {
+            width: 100%;
+            overflow-x: scroll;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        #carousel-container img {
+            display: inline-block;
+            width: 450px;
+            /* 調整推薦圖片區圖片大小 */
+        }
+
+        #carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        #carousel-container {
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+        }
+
+
+        #imgRed {
+            display: none;
+        }
+
+        #imgYellow {
+            display: none;
+        }
+
+        #imgBlue {
+            display: none;
+        }
+
+
+        /* 數量增減 */
+
+        .quantity-control {
+            padding: 5px 10px;
+            font-size: 12px;
+            border: none;
+        }
+
+        .quantity-input {
+            text-align: center;
+            width: 30vw;
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -62,14 +117,50 @@
             <!-- 左半部 -->
             <div class="gap"> </div>
 
-            <div class="col-lg-6">
-                <img src="./img/s1.jpg" class="img-fluid mt-5 sellImg" alt="Image">
+            <div class="col-lg-6 " id="productImage">
+                <div id="imgBlue">
+                    <img src="./img/pr1.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr2.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr3.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr4.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr5.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr6.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                    <img src="./img/pr7.jpg" class="img-fluid mt-5 sellImg blue" alt="Image">
+                </div>
+
+                <div id="imgRed">
+                    <img src="./img/prr1.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr2.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr3.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr4.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr5.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr6.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prr7.jpg" class="img-fluid mt-5 sellImg " alt="">
+
+                </div>
+
+
+
+
+                <div id="imgYellow">
+                    <img src="./img/prb1.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prb2.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prb3.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prb4.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prb5.jpg" class="img-fluid mt-5 sellImg " alt="">
+                    <img src="./img/prb6.jpg" class="img-fluid mt-5 sellImg " alt="">
+
+
+                </div>
+
             </div>
 
 
 
             <!-- 右半部 -->
-            <div class="col-lg-6 productText row">
+
+            <div class="col-lg-6 productText row ">
+
                 <div class="col-lg-4 fs-5">
                     <p>厚磅城市毛圈刺繡帽TEE</p>
                     <button class="buttonSell" onclick="selectSize('S')" id="sizeS">S</button>
@@ -93,10 +184,26 @@
                 <hr>
                 <!-- 右半部下半部分 縮合區-三部分 -->
                 <div class="row">
-                    <div style="text-align: center;">Number</div>
+                    <div class="pk row">
+                        <div class="col-lg-2 fs-5">
+                            <button class="quantity-control minus">-</button>
+                        </div>
+                        <div class="col-lg-8"><input type="number" readonly="readonly" class="quantity-input"></div>
+
+                        <div class="col-lg-2 fs-5">
+                            <button class="quantity-control plus">+</button>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
 
                     <div class="col-lg-6 fs-5"><button class=" buy">Buy Now</button></div>
-                    
+
                     <div class="col-lg-6 fs-5"><button class=" buy"><span>Add to Bag</span></button></div>
                 </div>
                 <hr>
@@ -107,113 +214,128 @@
                     <div class="col-lg-4 fs-5 detail" onclick="showData('size')">尺寸介紹</div>
                 </div>
 
-                <div id="dataContainer" class="detail"></div>
+                <div id="dataContainer" class="detail detailtx"></div>
                 <hr>
             </div>
 
 
+        </div>
+
+        <!-- 結束上半部圖片+介紹 -->
 
 
 
 
 
 
+        <div class="bg-white mt-5 abouthtml" id="about">
+            <div class="container-fluid">
+                <div class="row aboutText">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <div class="gap-4 mt-5"></div>
 
-            <div class="bg-white mt-5 abouthtml" id="about">
-                <div class="container-fluid">
-                    <div class="row aboutText">
-                        <div class="col-lg-8 offset-lg-2 text-center">
-                            <div class="gap-4 mt-5"></div>
 
-
-                        </div>
                     </div>
                 </div>
             </div>
-            <!--結束首頁圖片-->
+        </div>
+        <!--結束首頁圖片-->
+
+
+        <!-- 推薦商品區 -->
+        <p>推薦商品</p>
+
+        <div id="carousel-container">
+            <img src="./img/s9.jpg" alt="">
+            <img src="./img/s10.jpg" alt="">
+            <img src="./img/s11.jpg" alt="">
+            <img src="./img/s12.jpg" alt="">
+            <img src="./img/s13.jpg" alt="">
+            <img src="./img/s14.jpg" alt="">
+        </div>
+
+
+        <!-- 結束推薦商品 -->
 
 
 
+        <!--結束-->
 
 
-            <!--結束-->
+        <!--聯繫資料-->
 
+        <!-- START: Contact Info -->
+        <div class="container mt-5 mb-5" id="contact">
+            <div class="gap"></div>
+            <div class="row vertical-gap">
+                <div class="col-lg-5">
+                    <!-- START: Info -->
+                    <h2 class="display-4">Contact Info:</h2>
+                    <div class="gap mt-3"></div>
 
-            <!--聯繫資料-->
+                    <p>You can contact us through the following contact information, welcome to give us
+                        any
+                        feedback or
+                        question feedback, and welcome your reply at any time.</p>
 
-            <!-- START: Contact Info -->
-            <div class="container mt-5 mb-5" id="contact">
-                <div class="gap"></div>
-                <div class="row vertical-gap">
-                    <div class="col-lg-5">
-                        <!-- START: Info -->
-                        <h2 class="display-4">Contact Info:</h2>
-                        <div class="gap mt-3"></div>
+                    <ul class="contact-info">
+                        <li>
+                            <strong>Address:</strong> 24 Ranch Road, Miami,fl, 33189 United States
+                        </li>
+                        <li>
+                            <strong>Phone:</strong> +1-1186906538
+                        </li>
+                        <li>
+                            <strong>Email:</strong> a7868783@gmail.com
+                        </li>
+                        <li>
+                            <strong>Fax:</strong> +1-6284435434
+                        </li>
+                    </ul>
+                    <!-- END: Info -->
 
-                        <p>You can contact us through the following contact information, welcome to give us
-                            any
-                            feedback or
-                            question feedback, and welcome your reply at any time.</p>
+                </div>
 
-                        <ul class="contact-info">
-                            <li>
-                                <strong>Address:</strong> 24 Ranch Road, Miami,fl, 33189 United States
-                            </li>
-                            <li>
-                                <strong>Phone:</strong> +1-1186906538
-                            </li>
-                            <li>
-                                <strong>Email:</strong> a7868783@gmail.com
-                            </li>
-                            <li>
-                                <strong>Fax:</strong> +1-6284435434
-                            </li>
-                        </ul>
-                        <!-- END: Info -->
-
-                    </div>
-
-                    <div class="col-lg-7">
-                        <!-- START: Form -->
-                        <form action="#" class="form">
-                            <div class="row vertical-gap">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control required" name="name"
-                                        placeholder="Your Name">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control required" name="email"
-                                        placeholder="Your Email">
-                                </div>
+                <div class="col-lg-7">
+                    <!-- START: Form -->
+                    <form action="#" class="form">
+                        <div class="row vertical-gap">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control required" name="name" placeholder="Your Name">
                             </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control required" name="email" placeholder="Your Email">
+                            </div>
+                        </div>
 
-                            <div class="gap"></div>
-                            <input type="text" class="form-control required" name="title" placeholder="Your Title">
+                        <div class="gap"></div>
+                        <input type="text" class="form-control required" name="title" placeholder="Your Title">
 
-                            <div class="gap"></div>
-                            <textarea class="form-control required" name="message" rows="8" placeholder="Your Comment"
-                                aria-required="true"></textarea>
-                            <div class="gap"></div>
-                            <div class="form-response-success"></div>
-                            <div class="form-response-error"></div>
-                            <button class="btn btn-primary btn-lg">Send Message</button>
-                        </form>
-                        <!-- END: Form -->
-                    </div>
+                        <div class="gap"></div>
+                        <textarea class="form-control required" name="message" rows="8" placeholder="Your Comment"
+                            aria-required="true"></textarea>
+                        <div class="gap"></div>
+                        <div class="form-response-success"></div>
+                        <div class="form-response-error"></div>
+                        <button class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                    <!-- END: Form -->
                 </div>
-                <div class="gap-5"></div>
             </div>
-            <!-- END: Contact Info -->
+            <div class="gap-5"></div>
+
+        </div>
+        <!-- END: Contact Info -->
 
 
 
-            <script>
-                function showData(type) {
-                    var dataContainer = document.getElementById('dataContainer');
-                    var data = '';
+        <script>
+            function showData(type) {
+                var dataContainer = document.getElementById('dataContainer');
+                var data = '';
 
-                    if (type === 'product') {
-                        data = `此款版型寬鬆
+                if (type === 'product') {
+                    data = `此款版型寬鬆
                                     台灣製造/PAZZO自訂開發布料/親膚棉質布料/印花刺繡造型
                                     *實品顏色依單品照為主
                                     棉 100%
@@ -222,8 +344,8 @@
                                     素材產地 / 台灣
                                     加工產地 / 台灣
                                     P400093000102`;
-                    } else if (type === 'washing') {
-                        data = `1.深淺色請分開洗滌，以避免造成互相移染。
+                } else if (type === 'washing') {
+                    data = `1.深淺色請分開洗滌，以避免造成互相移染。
                                     2.請將商品翻面再放入大小適中之細網洗衣袋細中弱速水洗，以保持商品型態。
                                     3.洗滌時，水溫請低於30℃；請使用中性洗劑；浸泡時間不宜過長。
                                     4.請勿使用漂白劑、螢光增白劑及衣物柔軟劑，以免破壞布料。
@@ -231,70 +353,192 @@
                                     6.清洗後請快速調整商品型態並吊掛晾乾即可，勿直接曝曬於陽光下。
                                     7.如需整燙，請以低溫墊布熨燙，溫度不可超過110℃。
                                     8.穿著時，請留意避免與配件包包等他物接觸摩擦。`;
-                    } else if (type === 'size') {
-                        data = `S尺寸：適合胸圍 80-85cm，腰圍 60-65cm，臀圍 85-90cm。
+                } else if (type === 'size') {
+                    data = `S尺寸：適合胸圍 80-85cm，腰圍 60-65cm，臀圍 85-90cm。
                                      M尺寸：適合胸圍 86-91cm，腰圍 66-71cm，臀圍 91-96cm。
                                      L尺寸：適合胸圍 92-97cm，腰圍 72-77cm，臀圍 97-102cm。 `;
-                    }
-
-                    dataContainer.innerText = data;
                 }
 
+                dataContainer.innerText = data;
+            }
 
 
-                function selectSize(size) {
-                    var sizeS = document.getElementById('sizeS');
-                    var sizeM = document.getElementById('sizeM');
-                    var sizeL = document.getElementById('sizeL');
 
-                    sizeS.classList.remove('selected');
-                    sizeM.classList.remove('selected');
-                    sizeL.classList.remove('selected');
+            function selectSize(size) {
+                var sizeS = document.getElementById('sizeS');
+                var sizeM = document.getElementById('sizeM');
+                var sizeL = document.getElementById('sizeL');
 
-                    if (size === 'S') {
-                        sizeS.classList.add('selected');
-                    } else if (size === 'M') {
-                        sizeM.classList.add('selected');
-                    } else if (size === 'L') {
-                        sizeL.classList.add('selected');
+                sizeS.classList.remove('selected');
+                sizeM.classList.remove('selected');
+                sizeL.classList.remove('selected');
 
-                    }
-                    var sizeSelect = document.getElementById('sizeSelect');
-                    sizeSelect.innerText = size;
+                if (size === 'S') {
+                    sizeS.classList.add('selected');
+                } else if (size === 'M') {
+                    sizeM.classList.add('selected');
+                } else if (size === 'L') {
+                    sizeL.classList.add('selected');
+
                 }
+                var sizeSelect = document.getElementById('sizeSelect');
+                sizeSelect.innerText = size;
+            }
 
 
 
+            //顏色改變圖片
 
-                function selectColor(color) {
-                    var colorRed = document.getElementById('colorRed');
-                    var colorYellow = document.getElementById('colorYellow');
-                    var colorBlue = document.getElementById('colorBlue');
 
-                    colorRed.classList.remove('selected');
-                    colorYellow.classList.remove('selected');
-                    colorBlue.classList.remove('selected');
+            function selectColor(color) {
+                var colorText = document.getElementById('colorSelect')
+                var colorRed = document.getElementById('colorRed');
+                var colorYellow = document.getElementById('colorYellow');
+                var colorBlue = document.getElementById('colorBlue');
 
-                    if (color === 'Red') {
-                        colorRed.classList.add('selected');
-                    } else if (color === 'Yellow') {
-                        colorYellow.classList.add('selected');
-                    } else if (color === 'Blue') {
-                        colorBlue.classList.add('selected');
+                var imgRed = document.getElementById("imgRed");
+                var imgYellow = document.getElementById("imgYellow");
+                var imgBlue = document.getElementById("imgBlue");
 
-                    }
-                    var colorSelect = document.getElementById('colorSelect');
-                    colorSelect.innerText = color;
+                colorRed.classList.remove('selected');
+                colorYellow.classList.remove('selected');
+                colorBlue.classList.remove('selected');
+
+                if (color === 'Red') {
+                    colorRed.classList.add('selected');
+                    imgRed.style.display = "block";
+                    imgYellow.style.display = "none";
+                    imgBlue.style.display = "none";
+                    colorText.innerText = 'Red'
+                } else if (color === 'Yellow') {
+                    colorYellow.classList.add('selected');
+                    imgRed.style.display = "none";
+                    imgYellow.style.display = "block";
+                    imgBlue.style.display = "none";
+                    colorText.innerText = 'Black'
+                } else if (color === 'Blue') {
+                    colorBlue.classList.add('selected');
+                    imgRed.style.display = "none";
+                    imgYellow.style.display = "none";
+                    imgBlue.style.display = "block";
+                    colorText.innerText = 'Blue';
                 }
+            }
 
-                
-            </script>
-
-
+            //結束顏色改變
 
 
 
-            <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
+
+            // Function to check if an element is in the viewport
+            function isElementInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Function to handle scroll event
+            function handleScroll() {
+                var rightHalf = document.querySelector('.sticky-right');
+                var images = document.querySelectorAll('.sellImg');
+                var secondToLastImage = images[images.length - 2];
+
+                if (isElementInViewport(secondToLastImage)) {
+                    rightHalf.classList.remove('sticky');
+                } else {
+                    rightHalf.classList.add('sticky');
+                }
+            }
+
+            // Attach scroll event listener
+            window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+            // 推薦區滾動
+
+
+            // var container = document.getElementById('carousel-container');
+
+            // container.addEventListener('mousemove', function (event) {
+            //     var scrollSpeed = 3; // 调整滚动速度
+            //     var delta = (event.clientX - container.offsetLeft) / container.offsetWidth;
+
+            //     if (delta < 0.5) {
+            //         container.scrollLeft -= scrollSpeed;
+            //     } else {
+            //         container.scrollLeft += scrollSpeed;
+            //     }
+            // });
+
+
+
+
+            var container = document.getElementById('carousel-container');
+
+            container.addEventListener('mousemove', function (event) {
+                var scrollSpeed = 5; // 调整滚动速度
+                var delta = (event.clientX - container.offsetLeft) / container.offsetWidth;
+
+                if (delta < 0.5) {
+                    container.scrollLeft -= scrollSpeed;
+                } else {
+                    container.scrollLeft += scrollSpeed;
+                }
+            });
+
+
+
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+                // 默认选中蓝色
+                selectColor('Blue');
+            });
+
+
+
+            document.addEventListener('DOMContentLoaded', function () {
+                showData('product')
+            })
+
+
+
+
+
+            // 增減數量
+
+            var quantityInput = document.querySelector('.quantity-input');
+            var minusButton = document.querySelector('.minus');
+            var plusButton = document.querySelector('.plus');
+
+            // 减少数量
+            minusButton.addEventListener('click', function () {
+                if (quantityInput.value > 0) {
+                    quantityInput.value--;
+                }
+            });
+
+            // 增加数量
+            plusButton.addEventListener('click', function () {
+                quantityInput.value++;
+            });
+
+
+
+        </script>
+
+
+
+
+
+        <script src="bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script>
 
 </body>
 

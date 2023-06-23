@@ -40,28 +40,28 @@
     margin-bottom: 10px;
     align-items: center;
     justify-content: center;
-  }
-  
-  .category {
+}
+
+.category {
     margin-right: 5px;
-  }
-  
-  .products {
+}
+
+.products {
     display: flex;
-    
+
     justify-content: center;
-  }
-  
-  .product {
-    
+}
+
+.product {
+
     display: none;
-  }
-  
-  .show {
+}
+
+.show {
     display: block;
-  }
-  
-  
+}
+
+
 
 
 
@@ -367,13 +367,21 @@
 .sellImg {
     width: 80%;
     margin-left: 5vw;
+    margin: 0;
 }
 
 .productText {
     margin-top: 10vh;
     /* margin-left: 1vw; */
-    padding: 50px;
+    padding: 5px;
 
+}
+
+.productText {
+    position: sticky;
+    top: 12vh;
+    height: 70vh;
+    /* overflow-y: scroll; */
 }
 
 /* .spanSpace {
@@ -389,7 +397,8 @@
     background-color: white;
     color: black;
     border: 1px solid black;
-  
+
+
 }
 
 
@@ -402,51 +411,58 @@
 .products-container {
     display: flex;
     flex-wrap: wrap;
-   
-  }
-.category{
-    border:none;
+
+}
+
+.category {
+    border: none;
     background-color: #fff;
     padding: 0 12px;
 }
-.category:hover{
+
+.category:hover {
     border-bottom: 1px solid black;
     transform: scale(1.1);
     font-weight: bolder;
 }
-.home{
+
+.home {
     border: none;
 }
-.home:hover{
+
+.home:hover {
     border-bottom: 1px solid black;
 }
 
-.navAbout{
+.navAbout {
     border: none;
 }
-.navAbout:hover{
+
+.navAbout:hover {
     border-bottom: 1px solid black;
 }
 
-.NewArrival{
+.NewArrival {
     border: none;
 
 }
-.NewArrival:hover{
+
+.NewArrival:hover {
     border-bottom: 1px solid black;
 }
 
-.navLogin{
+.navLogin {
     border: none;
 }
-.navLogin:hover{
+
+.navLogin:hover {
     border-bottom: 1px solid rgb(226, 182, 128);
 }
 
 
 /* 產品詳細介紹 */
 
-.buttonSell{
+.buttonSell {
     background-color: white;
     border: none;
     padding: 12px;
@@ -455,28 +471,34 @@
 
 
 }
-.colorPick1{
+
+.colorPick1 {
     height: 36px;
-    width:36px;
+    width: 36px;
+
     background-color: rgb(233, 1, 1);
 }
-.colorPick2{
+
+.colorPick2 {
     height: 36px;
-    width:36px;
-    background-color: rgb(255, 232, 24);
+    width: 36px;
+    background-color: rgb(0, 0, 0);
 }
-.colorPick3{
+
+.colorPick3 {
     height: 36px;
-    width:36px;
+    width: 36px;
     background-color: rgb(36, 97, 211);
 }
+
 .selected {
-    border: 2px solid #000;
-    padding: 10px;
-    margin:5px;
-  }
-  
-.buy{
+    border: 3px solid #9da49c;
+
+    padding-block: 10px;
+    margin: 5px;
+}
+
+.buy {
     background-color: #fff;
     border: 1px solid black;
     font-size: medium;
@@ -484,11 +506,46 @@
     font-family: 'Times New Roman', Times, serif;
     /* display: block; */
 }
-.detail{
+
+.detail {
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+
+}
+
+.detail div {
     font-family: 'Times New Roman', Times, serif;
 
 }
-.detail div{
-    font-family: 'Times New Roman', Times, serif;
 
+.sticky {
+    position: sticky;
+    top: 0;
+    overflow-y: scroll;
+}
+
+.tt {
+    position: relative;
+}
+
+.buttonSell {
+    cursor: pointer;
+}
+
+.buttonSell:hover {
+    transform: scale(1.2);
+}
+
+.buy:hover {
+
+    transform: scale(1.2);
+
+}
+
+.detail:hover {
+    box-shadow: #9da49c;
+}
+
+.detailtx {
+    font-size: 0.8em;
 }
