@@ -591,3 +591,7 @@
 .ig:hover {
     background-color: #9da49c5a;
 }
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
