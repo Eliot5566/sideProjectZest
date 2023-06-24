@@ -549,3 +549,45 @@
 .detailtx {
     font-size: 0.8em;
 }
+
+
+.signP {
+    height: 10vh;
+}
+
+
+
+/* footer。。 */
+
+.bi-youtube {
+    color: red;
+}
+
+.bi-youtube:hover {
+    color: rgb(205, 14, 14);
+}
+
+.bi-line {
+    color: rgb(0, 200, 84);
+}
+
+.bi-line:hover {
+    color: rgb(5, 159, 69);
+}
+
+.bi-twitter {
+    color: rgb(29, 161, 242);
+}
+
+.bi-twitter:hover {
+    color: rgb(34, 143, 210);
+}
+
+.ig {
+    width: 55px;
+    /* height: auto; */
+}
+
+.ig:hover {
+    background-color: #9da49c5a;
+}
