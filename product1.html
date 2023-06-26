@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7cWork+Sans:400,500,700"
         rel="stylesheet" type="text/css">
@@ -89,6 +90,18 @@
 
             /* 添加其他样式，如背景颜色、居中等 */
         }
+
+        .cart-icon {
+            /* font-size: 22px; */
+            border: none;
+            margin-left: 75px;
+            
+            /* 设置图标的字体大小 */
+        }
+        .iconB{
+            text-decoration: none;
+
+        }
     </style>
 
 </head>
@@ -119,6 +132,11 @@
                         <li class="nav-item ">
                             <a class="nav-link fs-4" href="login.html">Login</a>
                         </li>
+                        <li class="nav-item cart cart-icon fs-5 mt-3"><a class="iconB" href="#">
+                                <ion-icon name="cart-outline"></ion-icon>
+                                <span id="cartCount">0</span>
+                                In Cart 
+                            </a></li>
                     </ul>
                 </div>
             </div>
@@ -231,7 +249,7 @@
 
                     <div class="col-lg-6 fs-5"><button class="buy m-2">Buy Now</button></div>
 
-                    <div class="col-lg-6 fs-5"><button class="buy m-2" onclick="addToCart()"><span>Add to
+                    <div class="col-lg-6 fs-5"><button class="buy m-2 add-cart" onclick="addToCart()"><span>Add to
                                 Bag</span></button></div>
                 </div>
                 <hr>
@@ -638,85 +656,77 @@
 
 
             // add to car
-            var cart = [];
+            //更新購物車數量
 
-            function addToCart() {
-                // 获取商品信息
-                var productName = document.getElementById('productName').innerText;
-                var productSize = document.getElementById('sizeSelect').innerText;
-                var productColor = document.getElementById('colorSelect').innerText;
-                var productPrice = 490; // 你可以根据实际情况设置商品价格
+            // 获取了页面上所有具有 "add-cart" 类名的元素，并将其存储在 cart 变量中
+            let cart = document.querySelectorAll('.add-cart');
+            let products = [{
+                names: 'Great Bear',
+                tag: 'bear',
+                price: 15,
+                inCart: 0
+            },
 
-                // 创建商品对象
-                var product = {
-                    name: productName,
-                    size: productSize,
-                    color: productColor,
-                    price: productPrice
-                };
+            {
+                names: 'Great Bear2',
+                tag: 'bear2',
+                price: 150,
+                inCart: 0
+            }
+            ]
 
-                // 将商品添加到购物车数组
-                cart.push(product);
 
-                // 更新购物车界面
-                document.addEventListener('DOMContentLoaded', function () {
-                    updateCartUI();
-                });
+
+            // for 循环遍历了 cart 数组中的每个元素，并为每个元素添加了一个点击事件监听器。当用户点击相应的 "add-cart" 元素时，会触发监听器中的回调函数。
+            // 為每個cart添加click監聽事件
+            for (let i = 0; i < cart.length; i++) {
+                // 點add-cart 執行=> 後方功能
+                cart[i].addEventListener('click', () => {
+                    cartNumbers();
+                })
+            }
+
+            // 存放到本地存取 localStorage google cloud
+            function cartNumbers() {
+                // 獲得存取在cartNumbers下的值(get.item)
+                let productNumbers = localStorage.getItem('cartNumbers');
+                // 獲取後轉換為數值
+                productNumbers = parseInt(productNumbers);
+
+
+                // if productNumbers數量大於1 本地存取cartNumbers 設置為 productNumbers + 1 ;
+                // 此外cartNumbers設置為1
+                if (productNumbers >= 1) {
+                    localStorage.setItem('cartNumbers', productNumbers + 1);
+                    // document.querySelector('.cart span').textContent =(productNumbers + 1);
+                    // 更新html中的數量
+                    document.getElementById('cartCount').innerText = (productNumbers + 1);
+
+
+
+                } else {
+                    localStorage.setItem('cartNumbers', 1);
+                    // document.querySelector('.cart span').textContent = 1
+                    document.getElementById('cartCount').innerText = 1;
+
+
+                }
+
+
+
 
             }
 
 
-            function updateCartUI() {
-                var cartContainer = document.getElementById('cart-container');
-                cartContainer.innerHTML = ''; // 清空购物车容器中的内容
-
-                // 遍历购物车数组中的商品
-                for (var i = 0; i < cart.length; i++) {
-                    var product = cart[i];
-
-                    // 创建商品项的HTML元素
-                    var productItem = document.createElement('div');
-                    productItem.classList.add('product-item');
-
-                    var name = document.createElement('span');
-                    name.textContent = product.name;
-
-                    var size = document.createElement('span');
-                    size.textContent = 'Size: ' + product.size;
-
-                    var color = document.createElement('span');
-                    color.textContent = 'Color: ' + product.color;
-
-                    var price = document.createElement('span');
-                    price.textContent = 'Price: ' + product.price;
-
-                    // 将商品项的HTML元素添加到购物车容器中
-                    productItem.appendChild(name);
-                    productItem.appendChild(size);
-                    productItem.appendChild(color);
-                    productItem.appendChild(price);
-                    cartContainer.appendChild(productItem);
+            // 如果已經有本地存取數量 獲取 並顯示在html中
+            function onLoadCartNumbers() {
+                let productNumbers = localStorage.getItem('cartNumbers');
+                if (productNumbers) {
+                    document.getElementById('cartCount').innerText = productNumbers;
                 }
             }
-
-
-            // 更新購物車內容
-            function updateCartUI() {
-                var cartContent = document.getElementById('cart-content');
-                cartContent.innerHTML = ''; // 清空购物车内容
-
-                // 遍历购物车数组中的商品
-                for (var i = 0; i < cart.length; i++) {
-                    var product = cart[i];
-
-                    // 创建用于显示商品信息的元素
-                    var productInfo = document.createElement('div');
-                    productInfo.textContent = 'Name: ' + product.name + ', Size: ' + product.size + ', Color: ' + product.color + ', Price: ' + product.price;
-
-                    // 将商品信息元素添加到购物车内容容器中
-                    cartContent.appendChild(productInfo);
-                }
-            }
+            // 調用上方定義的function 已刷新html內容
+            onLoadCartNumbers();
 
 
 
