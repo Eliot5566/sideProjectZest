@@ -33,7 +33,20 @@
     }
 }
 
+/* dark mode */
+.dark-mode {
+    --text-color: #fff; /* 暗模式下的文本颜色 */
+    --background-color: #333; /* 暗模式下的背景颜色 */
+}
+  
 
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: var(--background-color);
+      color: var(--text-color);
+    }
+  }
+  
 /* sell css */
 
 .categories {

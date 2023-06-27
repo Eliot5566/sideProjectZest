@@ -1,15 +1,15 @@
 var dataBase = [{
-    userName: 'Eliot',
-    password: 'su'
-},
-{
-    userName: 'Sally',
-    password: '123'
-},
-{
-    userName: 'Cares',
-    password: '123456'
-},
+        userName: 'Eliot',
+        password: 'su'
+    },
+    {
+        userName: 'Sally',
+        password: '123'
+    },
+    {
+        userName: 'Cares',
+        password: '123456'
+    },
 ];
 //輸入上半部後 才能看到下半部nesFeed
 
@@ -215,17 +215,6 @@ registerText.addEventListener("click", function () {
     loginForm.style.display = "none";
     registerForm.style.display = "block";
 });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
