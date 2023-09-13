@@ -21,7 +21,7 @@
  Selling Clothes Sites
 
 ## Project description
-
+- You can use the website to see the product https://eliot5566.github.io/sideProjectZest/
 This project was created for practice and not for any commercial or profit-making purposes. All content and resources are intended for personal study and experimentation. Please abide by relevant laws and licensing terms, and respect the rights and interests of the original author.
 
 Reference website https://www.pazzo.com.tw/
